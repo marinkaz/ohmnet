@@ -6,7 +6,7 @@ import networkx as nx
 
 def read_net(fname, weighted, directed, log):
     if weighted:
-        G = nx.read_edgelist(inodetype=int, data=(('weight', float),),
+        G = nx.read_edgelist(fname,nodetype=int, data=(('weight', float),),
                              create_using=nx.DiGraph())
     else:
         G = nx.read_edgelist(fname, nodetype=int, create_using=nx.DiGraph())
